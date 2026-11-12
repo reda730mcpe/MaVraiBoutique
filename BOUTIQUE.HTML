@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Legends - Boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>♟ CHESS <span>LEGENDS</span></h1>
+    <div class="wallet">🪙 <span id="coins">1000</span></div>
+  </header>
+
+  <main class="container">
+    <nav class="tabs">
+      <button class="tab active" data-page="shop">👜 Boutique</button>
+      
+      <button class="tab" data-page="inventory">🎒 Inventaire</button>
+    </nav>
+
+    <section id="shop" class="page active">
+      <h2>La boutique</h2>
+      <p class="subtitle">Personnalise ton expérience de jeu que par Mehdi.</p>
+      <div id="skin-list" class="skin-grid"></div>
+    </section>
+
+   
+
+    
+    <section id="inventory" class="page">
+      <h2>Mon inventaire</h2>
+      <p class="subtitle">Tes skins disponibles.</p>
+      <div id="inventory-list" class="skin-grid"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

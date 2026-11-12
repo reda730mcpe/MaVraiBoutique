@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box; /* evite que les element depasse */
+}
+
+body {
+  margin: 0;
+  background: #10101b; /* couleur du fond */
+  color: white;
+  font-family: Arial, sans-serif; /* police utiliser */
+}
+
+.topbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #191929;
+  border-bottom: 1px solid #34334c; /* petite bordure en bas */
+}
+
+.topbar h1 {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.topbar h1 span {
+  color: #a78bfa; /* couleur du texte */
+}
+
+.wallet {
+  background: #29243c;
+  padding: 12px 20px;
+  border-radius: 12px; /* arrondi les coins */
+  color: #ffd166;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto; /* centre les bails */
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+button {
+  cursor: pointer; /* change le curseur */
+  font-weight: bold;
+  border: none;
+  transition: 0.2s; /* petite animation */
+}
+
+.tab {
+  padding: 14px 22px;
+  color: #c4c1d8;
+  background: #202033;
+  border-radius: 10px;
+}
+
+/* effet quand on passe la souris */
+.tab:hover, .tab.active {
+  color: white;
+  background: #7548db;
+}
+
+.page {
+  display: none; /* cache les pages */
+}
+
+.page.active {
+  display: block; /* affiche la page */
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a5a2ba;
+  margin-bottom: 30px;
+}
+
+/* grille des skins */
+.skin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skin-card {
+  background: #1c1c2d;
+  border: 1px solid #35334d;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* donne un ptit mouvement dans le bueno pour les cartes les meilleurs walah*/
+.skin-card:hover {
+  transform: translateY(-5px);
+  border-color: #9870ff;
+}
+
+.skin-icon {
+  height: 125px;
+  display: grid;
+  place-items: center; /* centre l'image */
+  font-size: 75px;
+  background: #28253e;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.skin-card h3 {
+  margin: 8px 0;
+}
+
+.price {
+  color: #ffd166;
+  font-weight: bold;
+  margin: 12px;
+}
+
+/* bouton pour acheter */
+.card-button, .main-button {
+  background: #7548db;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* couleur quand on passe dessus */
+.card-button:hover, .main-button:hover {
+  background: #956df2;
+}
+
+/* bouton desactiver */
+.card-button:disabled, .main-button:disabled {
+  background: #464256;
+  cursor: not-allowed;
+}
+
+.equipped {
+  color: #70e5a3;
+  font-weight: bold;
+}
+
+/* fleche qui mets le resulatta */
+.pointer {
+  position: absolute;
+  z-index: 2; /* met la fleche en haut   */
+  left: 50%;
+  top: -19px;
+  transform: translateX(-50%);
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 35px solid #ffd166;
+}
+
+#spin-button {
+  display: block;
+  max-width: 280px;
+  margin: auto; /* mets le bouton au milieu */
+}
+
+/*pti message tu connais walah ces le sang ces le message il sait mais  il dit rien ces le petit message rebelle il es tdans le coin il fait rien juste ile est la hein */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #7548db;
+  padding: 15px 25px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+/* fait pop le message */
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
